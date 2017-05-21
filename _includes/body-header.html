@@ -1,0 +1,65 @@
+<header class="header" style="background-image: url('/images/header-background.jpg')">
+<style type="text/css">
+.author-bio-pic a img {
+    display : block;
+    margin : auto;
+}  
+.entry-title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.background-opacity {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.entry-wrapper {
+  padding: 25px
+}
+</style>
+  {% if page.type == 'post' %}
+    <div class="overlay background-opacity">
+  {% else %}
+    <div class="overlay">
+  {% endif %}
+    {% include navigation.html %}
+    
+    {% if page.slug == 'home' %}
+      <h2 class="txt-center">
+        Welcome to <strong>{{ site.title }}</strong>!
+      </h2>
+    {% endif %}
+    <div class="author-bio-pic">
+      <a href="javascript:void(0)">
+      {% if page.type == 'post' %}
+        {% if page.link %}
+          <h1 class="entry-title"><a href="{{ page.link }}">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %} <span class="link-arrow">&rarr;</span></a></h1>
+        {% else %}
+          <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
+        {% endif %}
+      {% else %}
+        {% if page.author %}
+          {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
+        {% endif %}
+        {% if author.avatar contains 'http' %}
+          <img src="{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
+        {% elsif author.avatar %}
+          <img src="{{ site.url }}/images/{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
+        {% endif %}
+      {% endif %}
+      <div style="text-align: center; background-color: rgba(0, 0, 0, 0.4); color: rgb(255, 255, 255); font-size: 2.0em; font-weight: bold; line-height: 1.5;">
+        {% if page.tags %}
+          <ul class="entry-tags">
+            {% for tag in page.tags %}
+              <li><a href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}" style="color: rgb(255, 255, 255);">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <div>Dhanendra Kumar (Web Developer)</div>
+        {% endif %}
+      </div>
+
+
+    </div>
+  </div>
+
+</header>

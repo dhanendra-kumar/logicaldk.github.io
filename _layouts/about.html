@@ -1,0 +1,112 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include head.html %}
+</head>
+<body id="post">
+{% include body-header.html %}
+<div id="main" role="main">
+  <article class="entry">
+    {% if page.image.feature %}<img src="{{ site.url }}/images/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}" {% if site.logo == null %}style="margin-top:0;"{% endif %}>{% if page.image.credit %}<p class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></p>{% endif %}{% endif %}
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        
+      </header>
+      <footer class="entry-meta" style="margin-top: 100px">
+        <div>
+          <h4>Skills</h4>
+          <ul style="list-style: none;padding: 0px;">
+          {% for skill in page.skills %}
+            <li>{{ skill }}</li>
+          {% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h4>Languages</h4>
+          <ul style="list-style: none;padding: 0px;">
+          {% for language in page.languages %}
+            <li>{{ language }}</li>
+          {% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h4>Databases</h4>
+          <ul style="list-style: none;padding: 0px;">
+          {% for database in page.databases %}
+            <li>{{ database }}</li>
+          {% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h4>Operting Systems</h4>
+          <ul style="list-style: none;padding: 0px;">
+          {% for opertingSystem in page.opertingSystems %}
+            <li>{{ opertingSystem }}</li>
+          {% endfor %}
+          </ul>
+        </div>
+      </footer>
+      <div class="entry-content">
+
+        {% if page.showHeading == true %}
+          {% if page.image.feature %}
+            <header class="masthead">
+              {% if site.logo != null %}
+              <div class="wrap">
+                <a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
+              </div>
+              {% endif %}
+            </header><!-- /.masthead -->
+          {% else %}
+            <header class="masthead">
+              <div class="wrap">
+                <h1 class="site-title animated fadeIn"><a href="{{ site.url }}/">{{ site.title }}</a></h1>
+                <h2 class="site-description animated fadeIn" itemprop="description">{{ site.description }}</h2>
+              </div>
+            </header><!-- /.masthead -->
+          {% endif %}
+        {% endif %}
+
+        <div>
+          <div class="row">
+            <h2>ABOUT ME</h2>
+            <p>{{page.aboutMe}}</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <h3><span class="fa fa-headphones"></span> Music</h3>
+              <p>{{page.music}}</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <h3><span class="fa fa-film"></span> Movies</h3>
+              <p>{{page.movies}}</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <h3><span class="fa fa-briefcase"></span> Traveling</h3>
+              <p>{{page.traveling}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 60px">
+          {{ content }}
+        </div>
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrapper"; background-size: cover;
+  <footer role="contentinfo" class="entry-wrapper">
+    {% include footer.html %}
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+{% include scripts.html %}
+
+</body>
+</html>
