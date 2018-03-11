@@ -8,7 +8,7 @@ movies: "In mean time, I prefer to watch action, adventure, comedy movies. My fa
 traveling: "I love travelling and advanture. In general whenever I have time to go somewhere, took my bike and move to my new destination. I also loved photography so captured moments on the way as well. Recently we had a 9 days trip to Leh and Ladhak, India."
 skills: [Grails, Agile, Spring, Spring Boot, Spring Data, Gradle, Selenium Testing Tool]
 languages: [Java, Groovy, HTML/CSS, JavaScript, JQuery, C]
-databases: [MongoDB, MySql, MS-Access]
+databases: [MongoDB, MySql, Oracle, MS-Access]
 opertingSystems: [Ubuntu, Window 7, Windows XP]
 ---
 
