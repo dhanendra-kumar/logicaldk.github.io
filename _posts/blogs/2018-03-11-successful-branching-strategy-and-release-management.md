@@ -22,12 +22,13 @@ Let’s take a look on the below git branching and release flow -
 
 In the above flow - 
 
-1. Every feature branch fork from development.
-2. Feature branch merge back to development.
-3. Release branch fork from development.
-4. Bug fixing due to merge done in release branch. 
+1. Development, release and hotfix branch fork from master.
+2. Every feature branch fork from development.
+3. Feature branch merge back to development.
+4. Development branch merge to release branch.
+4. Bug fixing while testing done in release branch. 
 5. Release branch merge to master. (master branch will go to production.)
-6. Add tag for release.
+6. Add tag for release on master branch.
 7. Release branch merge to development.
 8. Rebase all feature branches those are not in master.
 
