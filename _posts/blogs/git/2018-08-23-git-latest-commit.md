@@ -12,7 +12,7 @@ share: true
 excerpt: In this blog post you will learn, how to find the latest git commit from all branches.
 ---
 
-To find the latest git coomit from all branches, you need to understand with some set of commands.
+To find the latest git commit from all branches, you need to understand with some set of commands.
 
 Command 1: List all remote branches.
 
