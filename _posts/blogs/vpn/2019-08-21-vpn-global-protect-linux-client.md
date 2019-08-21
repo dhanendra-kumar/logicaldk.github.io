@@ -63,7 +63,7 @@ show                   -- show information
 
 How to connect the VPN?
 
-1. Without interactive mode -  
+-> Without interactive mode -  
 
 ```
 
@@ -71,7 +71,7 @@ user@linuxhost:~$ globalprotect connect --portal myportal.example.com
 
 ```
 
-2. With interactive mode - 
+-> With interactive mode - 
 
 ```
 
