@@ -8,3 +8,4 @@ build/
 run.sh
 _site/
 _site/*
+.DS_Store
