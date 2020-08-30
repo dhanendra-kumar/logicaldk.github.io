@@ -7,7 +7,7 @@ published: true
 comments: true
 category: blogs
 tags: [pubg, pubg mobile, Custom Room, Room Card, how to create a Custom Room, create custom room, tier1, tier2, tier2, customs]
-date: 2018-03-11T16:00:00+05:30
+date: 2020-08-30T20:00:00+05:30
 share: true
 excerpt: What is a Custom Room, Room Card and how to create a Custom Room?
 ---
